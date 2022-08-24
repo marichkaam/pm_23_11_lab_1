@@ -1,0 +1,19 @@
+{
+  "name": "pm_23_11",
+  "version": "1.0.0",
+  "description": "initial project setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marichkaam/pm_23_11_lab_1.git"
+  },
+  "author": "marichkaam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marichkaam/pm_23_11_lab_1/issues"
+  },
+  "homepage": "https://github.com/marichkaam/pm_23_11_lab_1#readme"
+}
