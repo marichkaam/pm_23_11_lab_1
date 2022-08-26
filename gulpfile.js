@@ -1,61 +1,73 @@
+const { watch, series, src, dest } = require("gulp")
 
-var gulp = require("gulp");
+const sass = require("gulp-sass")(require("sass"));
+const cssnano = require("gulp-cssnano")
+const autoprefixer = require("gulp-autoprefixer")
+const imagemin = require("gulp-imagemin")
+const concat = require("gulp-concat")
+const uglify = require("gulp-uglify")
+const rename = require("gulp-rename");
+var browserSync = require('browser-sync').create();
 
-var sass = require("gulp-sass"), //конвертує SASS в CSS
-    cssnano = require("gulp-cssnano"), //мінімізація CSS
-    autoprefixer = require('gulp-autoprefixer'), //додавання префіксів в
-    //CSS для підтримки
-    //старих браузер
-    imagemin = require('gulp-imagemin'), //стиснення зображень
-    concat = require("gulp-concat"), //об'єднання файлів - конкатенація
-    uglify = require("gulp-uglify"), //мінімізація javascript
-    rename = require("gulp-rename"); //перейменування файлівx
+function htmlTask(cb) {
+	src("app/*.html")
+		.pipe(dest("dist"));
 
+	browserSync.reload()
+	cb()
+}
 
-//копіювання HTML файлів в папку dist
-gulp.task("html", function () {
-    return gulp.src("src / *. html")
-        .pipe(gulp.dest("dist"));
-});
-//об'єднання, компіляція Sass в CSS, додавання префіксів і подальша
-//мінімізація коду
-gulp.task("sass", function () {
-    return gulp.src("src / sass / *. sass")
-        .pipe(concat('styles.sass'))
-        .pipe(sass())
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(cssnano())
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest("dist / css"));
-});
-//об'єднання і стиснення JS-файлів
-gulp.task("scripts", function () {
-    return gulp.src("src / js / *. js") //вихідна директорія файлів
-        .pipe(concat('scripts.js')) // конкатенація js-файлів в один
-        .pipe(uglify()) //стиснення коду
-        .pipe(rename({ suffix: '.min' })) //перейменування файлу з
-        //приставкою .min
-        .pipe(gulp.dest("dist / js")); // директорія продакшена
-});
-//cтискання зображень
-gulp.task('imgs', function () {
-    return gulp.src("src / images /*.+ (jpg | jpeg | png | gif)")
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{ removeViewBox: false }],
-            interlaced: true
-        }))
-        .pipe(gulp.dest("dist / images"))
-});
-//відстежування за змінами у файлах
-gulp.task("watch", function () {
-    gulp.watch("src / *. html", ["html"]);
-    gulp.watch("src / js / *. js", ["scripts"]);
-    gulp.watch("src / sass / *. sass", ["sass"]);
-    gulp.watch("src / images /*.+ (jpg | jpeg | png | gif)", ["imgs"]);
-});
-//Запуск тасків за замовчуванням
-gulp.task("default", ["html", "sass", "scripts", "imgs", "watch"]);
+function sassTask(cb) {
+	src("app/sass/*.sass")
+		.pipe(concat("style.sass"))
+		.pipe(sass())
+		.pipe(autoprefixer({
+			browsers: ["last 2 versions"],
+			cascade: false
+		}))
+		.pipe(cssnano())
+		.pipe(rename({ suffix: ".min" }))
+		.pipe(dest("dist/css"))
+
+	browserSync.reload()
+	cb()
+}
+
+function scriptsTask(cb) {
+	src("app/js/*.js")
+		.pipe(concat("scripts.js"))
+		.pipe(uglify())
+		.pipe(rename({ suffix: ".min" }))
+		.pipe(dest("dist/js"))
+
+	browserSync.reload()
+	cb()
+}
+
+function imagesTask(cb) {
+	src("app/images/*.+(jpg|jpeg|png|gif)")
+		.pipe(imagemin({
+			progressive: true,
+			svgoPlugins: [{ removeViewBox: false }],
+			interlaced: true
+		}))
+		.pipe(dest("dist/images"))
+
+	browserSync.reload()
+	cb()
+}
+
+function openTask(cb) {
+	browserSync.init({
+		server: {
+			baseDir: "dist/"
+		}
+	});
+}
+
+exports.default = series(htmlTask, sassTask, scriptsTask, imagesTask, openTask);
+
+watch("app/*.html", htmlTask)
+watch("app/js/*.js", scriptsTask)
+watch("app/sass/*.sass", sassTask)
+watch("app/images/*.+(jpg|jpeg|png|gif)", imagesTask)
