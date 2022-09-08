@@ -4,182 +4,418 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="app/css/style.css">
-    <style>
-        div {
-            margin: 10px;
-            border: 1px solid rgb(182, 206, 228);
-            font-size: 20px;
-            height: 80px;
-        }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+ <style>
+     * {
+    box-sizing: border-box;
+}
 
-        #header {
-            background-color: rgb(51, 57, 146);
-            width: 1408.5px;
-            height: 80px;
-            margin-bottom: -93px;
+.table td,
+.table th {
+    font-size: 8px;
+    font-family: "Lucida Console", "Courier New", monospace;
 
-        }
-
-        #header2 {
-            background-color: rgb(49, 36, 170);
-            width: 249px;
-            height: 79px;
-
-        }
+}
 
 
-        #sideBar {
-            background-color: rgb(255, 253, 253);
-            width: 250px;
-            height: 1450px;
-            float: left;
-            margin-top: -10px;
-        }
 
-        #main {
-            background-color: rgba(240, 240, 240, 0.863);
-            height: 1550px;
-            margin-left: 260px;
-            width: 1157px;
-            margin-top: -10px;
-        }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-        #welcome {
-            background-color: rgb(255, 253, 253);
-            float: left;
-            width: 540px;
-            height: 90px;
-        }
+div {
+    margin: 10px;
+    border: 0.1px solid rgba(162, 158, 172, 0.253);
+    font-size: 20px;
+    height: 80px;
+}
 
-        #total1 {
-            background-color: rgb(255, 253, 253);
-            float: left;
-            width: 255px;
-            height: 115px;
-            margin-top: 110px;
-            margin-left: -3.5px;
-           
-        }
+#header {
+    background-color: rgb(70, 77, 168);
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
 
-        #total2 {
-            background-color: rgb(255, 253, 253);
-            float: left;
-            width: 255px;
-            height: 115px;
-            margin-top: -1px;
-            margin-left: 285px;
-            margin-right: -20px;
-        }
+#header2 {
+    background-color: rgb(64, 55, 143);
+    width: 20%;
+    height: 80px;
+    margin: 0;
+  
+}
 
-        #active {
-            background-color: rgb(255, 253, 253);
-            margin-top: -112.5px;
-            width: 540px;
-            margin-left: -287px;
-            height: 90px;
-        }
+#sideBar {
+    background-color: white;
+    width: 20%;
+    height: 1400px;
+    margin: 0;
+    top: 80px;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    overflow: auto;
+}
 
-        #total3 {
-            background-color: rgb(255, 253, 253);
-            float: left;
-            width: 255px;
-            height: 115px;
-            margin-top: -1px;
-            margin-left: 577px;
-            margin-right: -20px;
-        }
+#block1 {
 
-        #total4 {
-            background-color: rgb(255, 253, 253);
+    background-color: white;
+    width: 100%;
+    height: 130px;
+    float: left;
+    margin-left: -0%;
+    margin-top: -0px;
+}
 
-            width: 255px;
-            height: 115px;
-            margin-top: -1px;
-            margin-left: -3px;
-            margin-top: 109.5px;
-        }
+#block2 {
 
-        #sales {
+    background-color: white;
+    width: 100%;
+    height: 500px;
+    float: left;
+    margin-left: -0%;
+    margin-top: -9.4px;
+}
 
-            background-color: rgb(255, 253, 253);
-            width: 1120px;
-            height: 320px;
-            margin-left: -581px;
-            margin-top: 140px;
-        }
+#block3 {
 
-        #leads {
-            background-color: rgb(255, 253, 253);
-            width: 670px;
-            height: 340px;
-            margin-left: -2px;
-            margin-top: 335px;
-        }
+    background-color: white;
+    width: 100%;
+    height: 770px;
+    float: left;
+    margin-left: -0%;
+    margin-top: -9.5px;
+}
 
-        #todoList {
-            background-color: rgb(255, 253, 253);
-            width: 429px;
-            height: 340px;
-            float: right;
-            margin-right: -449px;
-            margin-top: -2px;
+#main {
+    background-color: rgba(235, 235, 238, 0.863);
+    height: 1400px;
+    /* width: 80%; */
+    /* float: right; */
+    margin: 0;
+    margin-top: 80px; 
+    margin-left: 20%;
+    
+}
 
-        }
+#welcome {
+    background-color: white;
+    height: 100px;
+    width: 46.5%;
+    margin-left: 2.1%;
+    margin-bottom: -10px;
+    margin-top: 27px;
+    font-size: 10px;
+    color: black;
+}
 
-        #analytics {
-            background-color: rgb(255, 253, 253);
-            width: 480px;
-            height: 380px;
-            float: right;
-            margin-right: 0px;
-            margin-top: 460px;
+#active {
+    background-color: white;
+    height: 100px;
+    width: 46.5%;
+    float: right;
+    margin-top: -90px;
+    margin-right: 3%;
+}
 
+#total1 {
+    background-color: white;
+    height: 130px;
+    width: 22.3%;
+    float: left;
+    margin-left: 2%;
+    margin-top: -140px;
+}
 
-        }
+#total2 {
+    background-color: white;
+    height: 130px;
+    width: 22.3%;
+    margin-left: 26.3%;
+    margin-top: 30px;
+}
 
-        #activities {
-            background-color: rgb(255, 253, 253);
-            width: 580px;
-            height: 200px;
-            float: right;
-            margin-top: -371px;
-            margin-right: 538px;
-            /* margin-right: 449px; */
+#total3 {
+    background-color: white;
+    height: 130px;
+    width: 22.27%;
+    float: left;
+    margin-left: 50.5%;
+    margin-top: -140px;
+}
 
+#total4 {
+    background-color: white;
+    height: 130px;
+    width: 22.27%;
+    margin-right: 3%;
+    margin-top: -140px;
+    float: right;
+}
 
-        }
+#sales {
+    background-color: white;
+    height: 300px;
+    width: 95%;
+    margin-left: 2%;
+    margin-top: 20px;
+}
 
-        #activities2 {
-            background-color: rgb(255, 253, 253);
-            width: 580px;
-            height: 134px;
-            float: left;
-            margin-left: -693px;
+#leads {
+    background-color: white;
+    height: 300px;
+    width: 59.7%;
+    margin-left: 2%;
+    margin-top: 20px;
 
-            margin-top: -146px;
-        }
-    </style>
+}
+
+#line1 {
+    background-color: rgb(167, 161, 161);
+    height: 1px;
+    width: 94.8%;
+    margin-top: 45px;
+    margin-left: 2.5%;
+}
+
+#line2 {
+    background-color: rgb(167, 161, 161);;
+    height: 1px;
+    width: 94%;
+    margin-top: 45px;
+    margin-left: 2.5%;
+}
+
+#line3 {
+    background-color: rgb(167, 161, 161);;
+    height: 1px;
+    width: 94%;
+    margin-top: 45px;
+    margin-left: 2.5%;
+}
+
+#line4 {
+    background-color: rgb(167, 161, 161);;
+    height: 1px;
+    width: 94%;
+    margin-top: 45px;
+    margin-left: 2.5%;
+}
+
+#line5 {
+    background-color: rgb(167, 161, 161);;
+    height: 1px;
+    width: 94%;
+    margin-top: 45px;
+    margin-left: 2.5%;
+}
+
+#todoList {
+    background-color: white;
+    height: 300px;
+    width: 33.5%;
+    float: right;
+    margin-top: -310px;
+    margin-right: 3%;
+}
+
+#activities {
+    background-color: white;
+    height: 220px;
+    width: 47%;
+    float: left;
+    margin-top: 10px;
+    margin-left: 2%;
+}
+
+#activities2 {
+    background-color: white;
+    height: 145px;
+    width: 47%;
+    margin-top: 260px;
+    margin-left: 2%;
+}
+
+#analytics {
+
+    background-color: white;
+    height: 383.3px;
+    width: 46%;
+    float: right;
+    margin-top: -394.5px;
+    margin-right: 3%;
+}
+
+#blue {
+
+    background-color: rgb(85, 52, 204);
+    height: 33px;
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 100px;
+}
+
+#coral {
+
+    background-color: rgb(228, 72, 11);
+    height: 33px;
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 100px;
+}
+
+#green {
+
+    background-color: rgba(70, 155, 70, 0.877);
+    height: 33px;
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 100px;
+}
+
+#yellow {
+
+    background-color: orange;
+    height: 33px;
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 100px;
+}
+ </style>
 </head>
 
+
+
+
+
 <body>
-    <div id="header"></div>
-    <div id="header2"></div>
-    <div id="sideBar"></div>
+    <div id="header">
+        <div id="header2"></div>
+    </div>
+    <div id="sideBar">
+        <div id="block1"></div>
+        <div id="block2"></div>
+        <div id="block3"></div>
+
+    </div>
     <div id="main">
-        <div id="welcome">
-        <div id="total1">
+        <div id="welcome"></div>
+        <div id="active"></div>
+
         <div id="total2">
-        <div id="total3">
-        <div id="active">
+            <div id="coral"></div>
+        </div>
         <div id="total4">
-         <div id="sales">
+            <div id="yellow"></div>
+        </div>
+        <div id="total3">
+            <div id="green"></div>
+        </div>
+        <div id="total1">
+            <div id="blue"></div>
+        </div>
+        <div id="sales"></div>
         <div id="leads">
+            <div id="line1">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Lead Name</th>
+                            <th>Views</th>
+                            <th>Favorites</th>
+                            <th>Last Visit</th>
+                            <th> Last Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bayer</td>
+                            <td>Denise Ann</td>
+                            <td>153</td>
+                            <td>0</td>
+                            <td>9:23 AM</td>
+                            <td>8/27/2015</td>
+                        </tr>
+                        <tr>
+                            <td>Bayer</td>
+                            <td>Denise Ann</td>
+                            <td>153</td>
+                            <td>0</td>
+                            <td>9:23 AM</td>
+                            <td>8/27/2015</td>
+                        </tr>
+                        <tr>
+                            <td>Lanlord</td>
+                            <td>Denise Ann</td>
+                            <td>153</td>
+                            <td>0</td>
+                            <td>9:23 AM</td>
+                            <td>8/27/2015</td>
+                        </tr>
+                        <tr>
+                            <td>Bayer</td>
+                            <td>Denise Ann</td>
+                            <td>153</td>
+                            <td>0</td>
+                            <td>9:23 AM</td>
+                            <td>8/27/2015</td>
+                        </tr>
+                        <tr>
+                            <td>Seller</td>
+                            <td>Denise Ann</td>
+                            <td>153</td>
+                            <td>0</td>
+                            <td>9:23 AM</td>
+                            <td>8/27/2015</td>
+                        </tr>
+                        <tr>
+                            <td>Bayer</td>
+                            <td>Denise Ann</td>
+                            <td>153</td>
+                            <td>0</td>
+                            <td>9:23 AM</td>
+                            <td>8/27/2015</td>
+                        </tr>
+                        <tr>
+                            <td>Bayer</td>
+                            <td>Denise Ann</td>
+                            <td>153</td>
+                            <td>0</td>
+                            <td>9:23 AM</td>
+                            <td>8/27/2015</td>
+                        </tr>
+                        <tr>
+                            <td>Bayer</td>
+                            <td>Denise Ann</td>
+                            <td>153</td>
+                            <td>0</td>
+                            <td>9:23 AM</td>
+                            <td>8/27/2015</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
         <div id="todoList">
-        <div id="analytics"></div>
-         <div id="activities"></div>
-        <div id="activities2"></div>
+            <div id="line2"></div>
         </div>
+
+        <div id="activities">
+            <div id="line3"></div>
+        </div>
+        <div id="activities2">
+            <div id="line4"></div>
+        </div>
+        <div id="analytics">
+            <div id="line5"></div>
+        </div>
+    </div>
 
 
 </body>

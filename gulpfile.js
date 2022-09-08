@@ -32,6 +32,21 @@ function sassTask(cb) {
 	browserSync.reload()
 	cb()
 }
+function cssTask(cb) {
+	src("app/css/*.css")
+		// .pipe(concat("style.css"))
+		// .pipe(sass())
+		.pipe(autoprefixer({
+			browsers: ["last 2 versions"],
+			cascade: false
+		}))
+		.pipe(cssnano())
+		.pipe(rename({ suffix: ".min" }))
+		.pipe(dest("dist/css"))
+
+	browserSync.reload()
+	cb()
+}
 
 function scriptsTask(cb) {
 	src("app/js/*.js")
@@ -70,4 +85,5 @@ exports.default = series(htmlTask, sassTask, scriptsTask, imagesTask, openTask);
 watch("app/*.html", htmlTask)
 watch("app/js/*.js", scriptsTask)
 watch("app/sass/*.sass", sassTask)
+watch("app/css/*.css", cssTask)
 watch("app/images/*.+(jpg|jpeg|png|gif)", imagesTask)
