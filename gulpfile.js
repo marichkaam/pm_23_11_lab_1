@@ -60,13 +60,13 @@ function scriptsTask(cb) {
 }
 
 function imagesTask(cb) {
-	src("app/images/*.+(jpg|jpeg|png|gif)")
+	src("app/img/*.+(jpg|jpeg|png|gif|svg)")
 		.pipe(imagemin({
 			progressive: true,
 			svgoPlugins: [{ removeViewBox: false }],
 			interlaced: true
 		}))
-		.pipe(dest("dist/images"))
+		.pipe(dest("dist/img"))
 
 	browserSync.reload()
 	cb()
@@ -79,6 +79,7 @@ function openTask(cb) {
 		}
 	});
 }
+
 
 exports.default = series(htmlTask, sassTask, scriptsTask, imagesTask, openTask);
 

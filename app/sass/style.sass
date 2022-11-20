@@ -4,19 +4,22 @@
 .table
   td, th
     font-size: 8px
-    font-family: "Lucida Console", "Courier New", monospace
+    font-family: "RalewayMedium", monospace
+    position: relative
+    color: rgba(136, 136, 136, 0.781)
+    overflow: auto
 
 // body
 //   font-family: Arial, Helvetica, sans-serif
 
 div
   margin: 10px
-  border: 0.1px solid rgba(162, 158, 172, 0.253)
+  border: 0.1px solid #ecf0f4
   font-size: 20px
   height: 80px
 
 #header
-  background-color: rgb(70, 77, 168)
+  background-color: #464da8
   width: 100%
   height: 80px
   position: absolute
@@ -25,15 +28,18 @@ div
   margin: 0
 
 #header2
-  background-color: rgb(64, 55, 143)
+  background-color: #40378f
   width: 20%
   height: 80px
-  margin: 0
+  margin-top: -0px
+  position: absolute
+
+  margin-left: 200px
 
 #sideBar
   background-color: white
   width: 20%
-  height: 1400px
+  height: 1450px
   margin: 0
   top: 80px
   left: 0
@@ -67,7 +73,7 @@ div
 
 #main
   background-color: rgba(235, 235, 238, 0.863)
-  height: 1400px
+  height: 1450px
 
   /* width: 80%;
   /* float: right;
@@ -100,6 +106,7 @@ div
   float: left
   margin-left: 2%
   margin-top: -140px
+  position: relative
 
 #total2
   background-color: white
@@ -107,6 +114,7 @@ div
   width: 22.3%
   margin-left: 26.3%
   margin-top: 30px
+  position: relative
 
 #total3
   background-color: white
@@ -115,6 +123,7 @@ div
   float: left
   margin-left: 50.5%
   margin-top: -140px
+  position: relative
 
 #total4
   background-color: white
@@ -123,6 +132,7 @@ div
   margin-right: 3%
   margin-top: -140px
   float: right
+  position: relative
 
 #sales
   background-color: white
@@ -139,18 +149,19 @@ div
   margin-top: 20px
 
 #line1
-  background-color: rgb(167, 161, 161)
+  background-color: rgba(204, 204, 204, 0.616)
   height: 1px
   width: 94.8%
-  margin-top: 45px
+  margin-top: -5px
   margin-left: 2.5%
 
 #line2, #line3, #line4, #line5
-  background-color: rgb(167, 161, 161)
+  background-color: rgba(204, 204, 204, 0.616)
   height: 1px
   width: 94%
-  margin-top: 45px
+  margin-top: -2px
   margin-left: 2.5%
+  position: relative
 
 #todoList
   background-color: white
@@ -159,6 +170,7 @@ div
   float: right
   margin-top: -310px
   margin-right: 3%
+  position: relative
 
 #activities
   background-color: white
@@ -167,6 +179,7 @@ div
   float: left
   margin-top: 10px
   margin-left: 2%
+  position: relative
 
 #activities2
   background-color: white
@@ -174,21 +187,24 @@ div
   width: 47%
   margin-top: 260px
   margin-left: 2%
+  position: relative
 
 #analytics
   background-color: white
   height: 383.3px
   width: 46%
   float: right
-  margin-top: -394.5px
+  margin-top: -401px
   margin-right: 3%
+  position: relative
 
 #blue
-  background-color: rgb(85, 52, 204)
+  background-color: rgb(64, 55, 143)
   height: 33px
   width: 100%
-  margin-left: 0%
-  margin-top: 100px
+  position: absolute
+  bottom: 0
+  margin: 0
 
 #coral
   background-color: rgb(228, 72, 11)
@@ -196,6 +212,9 @@ div
   width: 100%
   margin-left: 0%
   margin-top: 100px
+  position: absolute
+  bottom: 0
+  margin: 0
 
 #green
   background-color: rgba(70, 155, 70, 0.877)
@@ -203,6 +222,9 @@ div
   width: 100%
   margin-left: 0%
   margin-top: 100px
+  position: absolute
+  bottom: 0
+  margin: 0
 
 #yellow
   background-color: orange
@@ -210,3 +232,564 @@ div
   width: 100%
   margin-left: 0%
   margin-top: 100px
+  position: absolute
+  bottom: 0
+  margin: 0
+
+#mini
+  height: 56px
+  width: 100%
+  margin: 0
+  border: none
+
+#w1
+  /* font-family: "Lucida Console", "Courier New", monospace;
+  font-size: medium
+  font-size: 18px
+  text-indent: 30px
+  padding-top: 20px
+  font-family: "Raleway", monospace
+
+#underWelcome
+  font-family: "Raleway", monospace
+  font-size: small
+  font-size: 12.5px
+  text-indent: 30px
+  margin-top: -10px
+
+#a1
+  font-family: "Raleway", monospace
+  font-size: medium
+  font-size: 18px
+  text-indent: 30px
+  padding-top: 20px
+
+#underActive
+  font-family: "Raleway", monospace
+  font-size: small
+  font-size: 12.5px
+  text-indent: 30px
+  margin-top: -10px
+
+#figureInWelcomeActive
+  font-family: "RalewayMedium", monospace
+  font-size: medium
+  font-size: 23px
+  text-indent: 30px
+  margin-top: -60px
+  margin-left: 80%
+
+#sal
+  font-family: "Raleway", monospace
+  font-size: medium
+  font-size: 23px
+  text-indent: 30px
+  margin-top: 30px
+  color: blue
+
+#coll
+  font-family: "Raleway", monospace
+  font-size: medium
+  font-size: 13px
+  margin-top: 20px
+  color: rgb(21, 21, 85)
+
+#textInSales
+  width: 40%
+  height: 2500px
+  margin-left: 3%
+
+#inColorBox
+  font-family: "Raleway", monospace
+  font-size: small
+  font-size: 11px
+  text-indent: 30px
+  margin-top: 8px
+  color: white
+
+#infinity
+  font-family: "RalewayMedium", monospace
+  font-size: medium
+  font-size: 15px
+  text-indent: 30px
+  margin-top: 30px
+  color: white
+
+#blockInSales
+  width: 40%
+  height: 100%
+  margin-top: -5px
+  margin-left: 0
+  border: none
+
+#salesText
+  font-family: "RalewayMedium", monospace
+  font-size: 20px
+  text-indent: 30px
+  margin-top: 25px
+  color: rgb(64, 55, 143)
+
+#articleInSales
+  font-family: "Raleway", monospace
+  font-size: 12px
+  text-indent: 30px
+  margin-top: 15px
+  color: black
+
+#textInLeads
+  font-family: "RalewaySemiBold", monospace
+  font-size: 10px
+  color: black
+  text-indent: 20px
+  margin-top: 15px
+
+#headerText
+  font-family: "Raleway"
+  font-size: 14px
+  color: rgba(238, 238, 238, 0.842)
+  text-indent: 30px
+  margin-top: 32px
+  margin-left: 280px
+
+#numberBlue
+  font-size: 15px
+  color: rgb(64, 55, 143)
+  text-indent: 30px
+  padding-top: 20px
+  font-family: "RalewayMedium", monospace
+
+#numberCoral
+  font-size: 15px
+  color: rgb(228, 72, 11)
+  text-indent: 30px
+  padding-top: 20px
+  font-family: "RalewayMedium", monospace
+
+#numberGreen
+  font-size: 15px
+  color: rgba(70, 155, 70, 0.877)
+  text-indent: 30px
+  padding-top: 20px
+  font-family: "RalewayMedium", monospace
+
+#numberOrange
+  font-size: 15px
+  color: orange
+  text-indent: 30px
+  padding-top: 20px
+  font-family: "RalewayMedium", monospace
+
+#inTotalsBox
+  font-family: "Raleway", monospace
+  font-size: small
+  font-size: 12.5px
+  text-indent: 30px
+  margin-top: -10px
+
+.button
+  border: none
+  color: white
+
+  /* padding: 16px 32px;
+  height: 100%
+  width: 100%
+  text-indent: 3px
+  text-align: left
+  text-decoration: none
+  display: inline-block
+  font-size: 14px
+  margin: 0px 0px
+  transition-duration: 0.4s
+  cursor: pointer
+
+.button1
+  background-color: white
+  color: rgb(83, 83, 83)
+  font-family: "RalewaySemiBold", monospace
+  border: none
+  position: relative
+
+  &:hover
+    background-color: #d3d3d3
+    color: grey
+
+#underList1
+  width: 100%
+  height: 50px
+  margin: 0
+  margin-top: 65px
+  background-color: white
+
+#underList2
+  width: 100%
+  height: 50px
+  margin: 0
+  background-color: rgba(224, 231, 238, 0.877)
+
+#myUL
+  font-size: 13px
+  font-family: "RalewayMedium", monospace
+  color: rgb(92, 90, 90)
+
+*
+  box-sizing: border-box
+
+.pie-chart
+  background: radial-gradient(circle closest-side, transparent 75%, white 0), conic-gradient(#2299e9 70deg, #1310d4 0 235deg, #339633 0)
+  position: relative
+  width: 20%
+  min-height: 88px
+  margin-left: 0px
+
+#mm
+  position: absolute
+  bottom: 1em
+  right: 1em
+  font-size: 12px
+  text-align: right
+  margin-right: 350px
+  font-family: "RalewayMedium", monospace
+  color: rgb(102, 100, 100)
+  border: none
+
+#nn
+  /* display: inline-block;
+  content: ""
+  width: 0.8em
+  height: 0.8em
+  margin-left: 0.4em
+  height: 0.8em
+  border-radius: 0.2em
+  background: currentColor
+
+#textInActive
+  width: 62%
+  height: 60%
+  margin-top: -95px
+  float: right
+  border: none
+
+#articleInActive
+  font-size: 11px
+  font-family: "RalewayMedium", monospace
+  line-height: 2px
+  color: rgb(102, 100, 100)
+
+#UI
+  font-size: 10px
+  font-family: "RalewayMedium", monospace
+  text-indent: 3px
+  text-align: left
+  margin: 0px
+  margin-left: 16px
+  color: rgba(128, 128, 128, 0.774)
+
+#textRightPhoto
+  font-size: 12px
+  margin-top: -70px
+  text-indent: 120px
+  font-family: "RalewaySemiBold", monospace
+  color: rgb(114, 113, 113)
+
+#textRightPhoto2
+  font-size: 9px
+  margin-top: -15px
+  text-indent: 120px
+  font-family: "RalewaySemiBold", monospace
+  color: rgb(163, 161, 161)
+
+.perpendicular-line-green
+  width: 8.5%
+  margin: auto
+  margin-top: 22%
+  transform: rotate(90deg)
+  float: left
+  border-color: #078025
+  border-width: 1.5px
+
+.perpendicular-line-blue
+  width: 8.5%
+  margin-top: -13.6%
+  transform: rotate(90deg)
+  position: absolute
+  border-color: #0119f3
+  border-width: 1.5px
+  margin-right: 580px
+
+.perpendicular-line-orange
+  width: 8.5%
+  margin-top: -6%
+  transform: rotate(90deg)
+  position: absolute
+  margin-right: 580px
+  border-color: #ff7b00
+  border-width: 1.5px
+
+.dot-green
+  height: 6px
+  width: 6px
+  background-color: #078025
+  border-radius: 50%
+  display: inline-block
+  margin-top: 18%
+  margin-left: -26px
+  position: relative
+
+.dot-orange
+  height: 6px
+  width: 6px
+  background-color: #ff7b00
+  border-radius: 50%
+  display: inline-block
+  margin-bottom: 7.7%
+  margin-left: -2%
+  position: relative
+
+.dot-blue
+  height: 6px
+  width: 6px
+  background-color: #0119f3
+  border-radius: 50%
+  display: inline-block
+  margin-bottom: 15%
+  margin-left: -2%
+  position: relative
+
+#textNearGreen
+  font-size: 12px
+  font-family: "RalewayMedium", monospace
+  color: rgb(63, 62, 62)
+  margin-top: 5px
+
+#textNearGreen2
+  font-size: 8.5px
+  font-family: "Raleway", monospace
+  color: rgb(165, 164, 164)
+  margin-top: -48px
+
+#textNearOrange
+  font-size: 12px
+  font-family: "RalewayMedium", monospace
+  color: rgb(63, 62, 62)
+  margin-top: -55px
+
+#textNearOrange2
+  font-size: 8.5px
+  font-family: "Raleway", monospace
+  color: rgb(165, 164, 164)
+  margin-top: -48px
+
+#textNearBlue
+  font-size: 12px
+  font-family: "RalewayMedium", monospace
+  color: rgb(63, 62, 62)
+  margin-top: -105px
+
+#textNearBlue2
+  font-size: 8.5px
+  font-family: "Raleway", monospace
+  color: rgb(165, 164, 164)
+  margin-top: -48px
+
+#square
+  display: inline-block
+  content: ""
+  width: 1.1em
+  height: 1.1em
+  margin-bottom: 2px
+  border-radius: 0.1em
+  background: currentColor
+  right: 15px
+  position: absolute
+
+#figureIn
+  color: white
+  font-size: 9px
+  margin: 0
+  text-indent: 4px
+  font-family: "RalewayMedium", monospace
+
+#footerLine
+  background-color: rgba(189, 184, 184, 0.616)
+  height: 1px
+  width: 95%
+  margin-top: 50px
+  margin-left: 1.8%
+  position: relative
+
+#textInFooter
+  font-size: 11px
+  text-indent: 19px
+  font-family: "RalewaySemiBold", monospace
+  margin-top: 19px
+  color: rgba(88, 87, 87, 0.87)
+
+#textInFooter2
+  font-size: 11px
+  text-indent: 77px
+  font-family: "RalewaySemiBold"
+  margin-top: -32px
+  color: rgba(88, 87, 87, 0.87)
+
+#textInFooter3
+  font-size: 11px
+  text-indent: 300px
+  font-family: "RalewaySemiBold"
+  margin-top: -32px
+  color: rgba(88, 87, 87, 0.87)
+
+#textInFooter4
+  font-size: 11px
+  text-indent: 365px
+  font-family: "RalewaySemiBold"
+  margin-top: -32px
+  color: rgba(88, 87, 87, 0.87)
+
+#textInFooter5
+  font-size: 11px
+  text-indent: 1045px
+  font-family: "RalewaySemiBold"
+  margin-top: -32px
+  color: rgba(88, 87, 87, 0.87)
+
+ul
+  margin: 0
+  padding: 0
+  width: 100%
+
+  li
+    cursor: pointer
+    position: relative
+    padding: 12px 8px 12px 40px
+    background: white
+    font-size: 10px
+    transition: 0.2s
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+    &:nth-child(odd), &:hover
+      background: white
+
+    &.checked
+      background: white
+      color: grey
+      text-decoration: line-through
+
+      &::before
+        content: ''
+        position: absolute
+        border-color: green
+        border-style: solid
+        border-width: 0 2px 2px 0
+        top: 10px
+        left: 16px
+        transform: rotate(45deg)
+        height: 15px
+        width: 7px
+
+#myInput
+  width: 100%
+  height: 50px
+  border: none
+  font-size: 15px
+  text-indent: 2%
+
+.addBtn
+  height: 33px
+  width: 30px
+  background: #4baf50
+  color: #555
+  margin-left: 8px
+  margin-bottom: 15px
+  text-align: center
+  font-size: 10px
+  cursor: pointer
+  transition: 0.3s
+  border-radius: 0
+
+  &:hover
+    background-color: #4baf50
+
+.close
+  position: absolute
+  right: 0
+  top: 0
+  padding: 12px 16px 12px 16px
+
+  &:hover
+    background-color: #4baf50
+    color: white
+
+.buttonINTODO
+  background-color: #4baf50
+  border: none
+  color: white
+  text-align: center
+  text-decoration: none
+  display: inline-block
+  font-size: 9px
+  width: 30px
+  height: 23px
+  margin-left: 10px
+  cursor: pointer
+
+#myChart
+  background: rgb(248, 245, 245)
+
+a
+  margin-top: 50px
+
+  /* width: 60%;
+  display: block
+  text-decoration: none
+  color: #80b6f4
+  font-weight: bold
+  text-align: center
+  height: 200px
+
+.dropbtn
+  background-color: #4baf50
+  color: white
+  padding: 16px
+  font-size: 16px
+  border: none
+  cursor: pointer
+
+.dropdown
+  position: relative
+  display: inline-block
+
+.dropdown-content
+  display: none
+  position: absolute
+  right: 0
+  background-color: #f9f9f9
+  min-width: 160px
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2)
+  z-index: 1
+
+#inTODO
+  margin: 0
+  width: 100%
+  height: 50px
+  margin-top: -11px
+  border-color: #e1e7f5
+  background-color: #f0f4fb
+
+.dropdown-content a
+  color: black
+  padding: 12px 16px
+  text-decoration: none
+  display: block
+
+  &:hover
+    background-color: #f1f1f1
+
+.dropdown:hover
+  .dropdown-content
+    display: block
+
+  .dropbtn
+    background-color: #4baf50

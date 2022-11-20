@@ -3,136 +3,677 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="js/script.js">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <style>
+        @font-face {
+            font-family: "Raleway";
+            src: url(/fonts/Raleway-ExtraLight.ttf);
+
+        }
+
+        @font-face {
+            font-family: "RalewayMedium";
+            src: url(/fonts/Raleway-Medium.ttf);
+
+        }
+
+        @font-face {
+            font-family: "RalewaySemiBold";
+            src: url(/fonts/Raleway-SemiBold.ttf);
+
+        }
+
+
+
+        .addBtn {
+            /* padding: 10px; */
+            height: 50%;
+            width: 10%;
+            background: #4baf50;
+            color: rgb(237, 241, 239);
+            float: left;
+            margin-left: 10px;
+            text-align: center;
+            margin-top: 9px;
+            font-size: 13px;
+            font-family: "Raleway";
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 0;
+        }
+    </style>
+
+
+
+
 
 </head>
 
+
+
 <body>
     <div id="header">
-        <div id="header2"></div>
+        <p id="headerText">Dashboard</p>
+        <img src="img/bell.png" style="height: 20px; width: 20px; margin-left: 88%; margin-top: -85px;">
+        <img src="img/envelope.png" style="height: 19px; width: 19px; margin-left: 91%; margin-top: -145px;">
+        <img src="img/search (1).png" style="height: 19px; width: 19px; margin-left: 94%; margin-top: -205px;">
+
+        <img src="img/grid.png" style="height: 19px; width: 19px; margin-left: 97%; margin-top: -268px;">
+
+    </div>
+
+
+
+
+    <div id="header2">
+
+
+        <p id="infinity"> <img src="img/infinite.png" style="height: 22px; width: 22px;margin-top: 0px;">
+            Infinity</p>
+    </div>
     </div>
     <div id="sideBar">
-        <div id="block1"></div>
-        <div id="block2"></div>
-        <div id="block3"></div>
+        <div id="block1">
+            <img src="img/mohamm.png" style="height: 100px; width: 110px;margin-top: 20px;margin-left: 0px;" alt="mm">
+            <p id="textRightPhoto">MOHAMED SAID</p>
+            <p id="textRightPhoto2">Founder of App</p>
+        </div>
+        <div id="block2">
+            <div id="mini">
+                <p id="UI">UI Kits</p>
+            </div>
+            <div id="mini">
+                <button class="button button1"> Dashboard
+                    <img src="img/home-free-icon-font (1).png"
+                        style="float: left; height: 12px; width: 12px; margin-left: 13px; margin-top: 3px;" alt="clip">
+                </button>
+            </div>
+            <div id="mini">
+                <button class="button button1">Apps
+                    <img src="img/bolt-free-icon-font.png"
+                        style="float: left; height: 12px; width: 12px; margin-left: 13px; margin-top: 3px;" alt="clip">
+                    <span id="square" style="color:rgb(228, 72, 11)">
+                        <p id=figureIn>3</p>
+                    </span>
+
+                </button>
+            </div>
+            <div id="mini">
+                <button class="button button1">Components
+                    <img src="img/lock-free-icon-font.png"
+                        style="float: left; height: 12px; width: 12px; margin-left: 13px; margin-top: 3px;" alt="clip">
+                    <span id="square" style="color:rgba(70, 155, 70, 0.877)">
+                        <p id=figureIn>9</p>
+                    </span>
+                </button>
+            </div>
+            <div id="mini">
+                <button class="button button1">EMAIL
+                    <img src="img/envelope-free-icon-font.png"
+                        style="float: left; height: 12px; width: 12px; margin-left: 13px; margin-top: 3px;" alt="clip">
+                    <span id="square" style="color:rgb(64, 55, 143)">
+                        <p id=figureIn>4</p>
+                    </span>
+                </button>
+            </div>
+            <div id="mini">
+                <button class="button button1">Form
+                    <img src="img/envelope-free-icon-font.png"
+                        style="float: left; height: 12px; width: 12px; margin-left: 13px; margin-top: 3px;" alt="clip">
+                </button>
+            </div>
+            <div id="mini">
+                <button class="button button1">Mapps
+                    <img src="img/map-free-icon-font.png"
+                        style="float: left; height: 12px; width: 12px; margin-left: 13px; margin-top: 3px;" alt="clip">
+                </button>
+            </div>
+            <div id="mini">
+                <button class="button button1">Pages
+                    <img src="img/copy-free-icon-font.png"
+                        style="float: left; height: 12px; width: 12px; margin-left: 13px; margin-top: 3px;" alt="clip">
+                    <span id="square" style="color:orange">
+                        <p id=figureIn>8</p>
+                    </span>
+                </button>
+            </div>
+            <div id="mini">
+                <button class="button button1">Menu
+                    <img src="img/home-free-icon-font (1).png"
+                        style="float: left; height: 12px; width: 12px; margin-left: 13px; margin-top: 3px;" alt="clip">
+                </button>
+            </div>
+
+        </div>
+        <div id="block3">
+            <div id="mini">
+                <button class="button button1">Settings
+                    <img src="img/settings-free-icon-font.png"
+                        style="float: left; height: 12px; width: 12px; margin-left: 13px; margin-top: 3px;" alt="clip">
+                </button>
+            </div>
+            <div id="mini">
+                <button class="button button1">Document
+                    <img src="img/search-alt-free-icon-font.png"
+                        style="float: left; height: 12px; width: 12px; margin-left: 13px; margin-top: 3px;" alt="clip">
+                    <span id="square" style="color:rgb(64, 55, 143)">
+                        <p id=figureIn>2</p>
+                    </span>
+                </button>
+            </div>
+            <div id="mini">
+                <button class="button button1">HTML Version
+                    <img src="img/html.png"
+                        style="float: left; height: 12px; width: 12px; margin-left: 13px; margin-top: 3px;" alt="clip">
+                </button>
+            </div>
+        </div>
 
     </div>
     <div id="main">
-        <div id="welcome"></div>
-        <div id="active"></div>
+        <div id="welcome">
+            <p id="w1">Welcome to Infinity</p>
+            <p id="underWelcome">Number of views</p>
+            <p id="figureInWelcomeActive">102</p>
+        </div>
+        <div id="active">
+            <p id="a1">Active</p>
+            <p id="underActive">Leads/Contacts</p>
+            <p id="figureInWelcomeActive">125</p>
+        </div>
 
         <div id="total2">
-            <div id="coral"></div>
+            <p id="numberCoral">3,490k</p>
+            <p id="inTotalsBox">Total Panding</p>
+            <img src="img/forbidden.png" style="height: 50px; width: 50px;margin-left: 67%; margin-top: -100px;"
+                alt="clip">
+            <div id="coral">
+                <p id="inColorBox">% change</p>
+            </div>
         </div>
         <div id="total4">
-            <div id="yellow"></div>
+            <p id="numberOrange">3,490k</p>
+            <p id="inTotalsBox">Total Leads</p>
+            <img src="img/calendar-free-icon-font.png"
+                style="height: 50px; width: 50px;margin-left: 67%; margin-top: -100px;" alt="clip">
+            <div id="yellow">
+                <p id="inColorBox">% change</p>
+            </div>
         </div>
         <div id="total3">
-            <div id="green"></div>
+            <p id="numberGreen">8,372k</p>
+            <p id="inTotalsBox">Case Closed</p>
+            <img src="img/users-alt-free-icon-font.png"
+                style="height: 50px; width: 50px;margin-left: 67%; margin-top: -100px;" alt="clip">
+            <div id="green">
+                <p id="inColorBox">% change</p>
+            </div>
         </div>
         <div id="total1">
-            <div id="blue"></div>
+            <p id="numberBlue">66,163k</p>
+            <p id="inTotalsBox">Total Leads</p>
+            <img src="img/clip.png" style="height: 50px; width: 50px;margin-left: 67%; margin-top: -100px;" alt="clip">
+            <div id="blue">
+                <p id="inColorBox">% change</p>
+
+            </div>
         </div>
-        <div id="sales"></div>
+
+        <div id="sales">
+
+            <!--        
+                <canvas id="myChart"></canvas>
+      
+            <script>
+                var ctx = document.getElementById("myChart").getContext("2d");
+
+                var gradientStroke = ctx.createLinearGradient(100, 0, 800, 0);
+                gradientStroke.addColorStop(0, "#E01745");
+                gradientStroke.addColorStop(0.5, "#44D40E");
+                gradientStroke.addColorStop(1, "#1794E0");
+
+                var myChart = new Chart(ctx, {
+                    type: "line",
+                    data: {
+                        labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
+                        datasets: [
+                            {
+                                // label: "Data",
+                                borderColor: gradientStroke,
+                                pointBorderColor: gradientStroke,
+                                pointBackgroundColor: gradientStroke,
+                                pointHoverBackgroundColor: gradientStroke,
+                                pointHoverBorderColor: gradientStroke,
+                                pointBorderWidth: 0,
+                                pointHoverRadius: 0,
+                                pointHoverBorderWidth: 1,
+                                pointRadius: 0,
+                                fill: false,
+                                borderWidth: 7,
+                                data: [100, 120, 150, 100, 180, 170, 160]
+                            }
+                        ]
+                    },
+                    options: {
+                        legend: {
+                            position: "bottom"
+                        },
+                        scales: {
+                            yAxes: [
+                                {
+                                    ticks: {
+                                        fontColor: "#FFFFFF",
+                                        fontStyle: "bold",
+                                        beginAtZero: true,
+                                        maxTicksLimit: 5,
+                                        padding: 20
+                                    },
+                                    gridLines: {
+                                        drawBorder: false,
+                                        display: false
+                                    }
+                                }
+                            ],
+                            xAxes: [
+                                {
+                                    gridLines: {
+                                        zeroLineColor: "transparent"
+                                    },
+                                    ticks: {
+                                        padding: 20,
+                                        fontColor: "rgba(0,0,0,0.5)",
+                                        fontStyle: "bold"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                });
+
+            </script> -->
+
+            <div id="blockInSales">
+
+                <h5 id="salesText">Sales in 2014</h5>
+                <p id="articleInSales">Collaboratively administrate emprowered markets</p>
+                <p id="articleInSales">via plug-and-play networks. Dynamically pro-</p>
+                <p id="articleInSales">crastinate B2C users after installed base bene-</p>
+                <p id="articleInSales">fits. Dramatically vizualize customer directed</p>
+                <p id="articleInSales">convergence without</p>
+                <p id="articleInSales">revolutionary ROI.</p>
+            </div>
+
+
+
+
+        </div>
+
+
+
+
         <div id="leads">
+            <p id="textInLeads">ACTIVE LEADS</p>
             <div id="line1">
-                <table class="table table-borderless">
-                    <thead>
-                        <tr>
-                            <th>Type</th>
-                            <th>Lead Name</th>
-                            <th>Views</th>
-                            <th>Favorites</th>
-                            <th>Last Visit</th>
-                            <th> Last Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Bayer</td>
-                            <td>Denise Ann</td>
-                            <td>153</td>
-                            <td>0</td>
-                            <td>9:23 AM</td>
-                            <td>8/27/2015</td>
-                        </tr>
-                        <tr>
-                            <td>Bayer</td>
-                            <td>Denise Ann</td>
-                            <td>153</td>
-                            <td>0</td>
-                            <td>9:23 AM</td>
-                            <td>8/27/2015</td>
-                        </tr>
-                        <tr>
-                            <td>Lanlord</td>
-                            <td>Denise Ann</td>
-                            <td>153</td>
-                            <td>0</td>
-                            <td>9:23 AM</td>
-                            <td>8/27/2015</td>
-                        </tr>
-                        <tr>
-                            <td>Bayer</td>
-                            <td>Denise Ann</td>
-                            <td>153</td>
-                            <td>0</td>
-                            <td>9:23 AM</td>
-                            <td>8/27/2015</td>
-                        </tr>
-                        <tr>
-                            <td>Seller</td>
-                            <td>Denise Ann</td>
-                            <td>153</td>
-                            <td>0</td>
-                            <td>9:23 AM</td>
-                            <td>8/27/2015</td>
-                        </tr>
-                        <tr>
-                            <td>Bayer</td>
-                            <td>Denise Ann</td>
-                            <td>153</td>
-                            <td>0</td>
-                            <td>9:23 AM</td>
-                            <td>8/27/2015</td>
-                        </tr>
-                        <tr>
-                            <td>Bayer</td>
-                            <td>Denise Ann</td>
-                            <td>153</td>
-                            <td>0</td>
-                            <td>9:23 AM</td>
-                            <td>8/27/2015</td>
-                        </tr>
-                        <tr>
-                            <td>Bayer</td>
-                            <td>Denise Ann</td>
-                            <td>153</td>
-                            <td>0</td>
-                            <td>9:23 AM</td>
-                            <td>8/27/2015</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div style="overflow-x:auto;height: 250px;border: none;">
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th style="font-size: 10px; color: black;">Type</th>
+                                <th style="font-size: 10px; color: black;">Lead Name</th>
+                                <th style="font-size: 10px; color: black;">Views</th>
+                                <th style="font-size: 10px; color: black;">Favorites</th>
+                                <th style="font-size: 10px; color: black;">Last Visit</th>
+                                <th style="font-size: 10px; color: black;"> Last Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="color: blue;">Bayer</td>
+                                <td>Denise Ann</td>
+                                <td>153</td>
+                                <td>0</td>
+                                <td>9:23 AM</td>
+                                <td><img src="img/network.png" style="height: 11px; width: 11px;" alt="clip">
+                                    8/27/2015</td>
+                            </tr>
+                            <tr>
+                                <td style="color: blue;">Bayer</td>
+                                <td>Denise Ann</td>
+                                <td>153</td>
+                                <td>0</td>
+                                <td>9:23 AM</td>
+                                <td><img src="img/network.png" style="height: 11px; width: 11px;" alt="clip">
+                                    8/27/2015</td>
+                            </tr>
+                            <tr>
+                                <td style="color: rgba(53, 167, 24, 0.925);">Lanlord</td>
+                                <td>Denise Ann</td>
+                                <td>153</td>
+                                <td>0</td>
+                                <td>9:23 AM</td>
+                                <td><img src="img/email.png" style="height: 11px; width: 11px;" alt="clip">
+                                    8/27/2015</td>
+                            </tr>
+                            <tr>
+                                <td style="color: blue;">Bayer</td>
+                                <td>Denise Ann</td>
+                                <td>153</td>
+                                <td>0</td>
+                                <td>9:23 AM</td>
+                                <td><img src="img/email.png" style="height: 11px; width: 11px;" alt="clip">
+                                    8/27/2015</td>
+                            </tr>
+                            <tr>
+                                <td style="color: chocolate;">Seller</td>
+                                <td>Denise Ann</td>
+                                <td>153</td>
+                                <td>0</td>
+                                <td>9:23 AM</td>
+                                <td><img src="img/network.png" style="height: 11px; width: 11px;" alt="clip">
+                                    8/27/2015</td>
+                            </tr>
+                            <tr>
+                                <td style="color: blue;">Bayer</td>
+                                <td>Denise Ann</td>
+                                <td>153</td>
+                                <td>0</td>
+                                <td>9:23 AM</td>
+                                <td><img src="img/network.png" style="height: 11px; width: 11px;" alt="clip">
+                                    8/27/2015</td>
+                            </tr>
+                            <tr>
+                                <td style="color: blue;">Bayer</td>
+                                <td>Denise Ann</td>
+                                <td>153</td>
+                                <td>0</td>
+                                <td>9:23 AM</td>
+                                <td><img src="img/email.png" style="height: 11px; width: 11px;" alt="clip">
+                                    8/27/2015</td>
+                            </tr>
+                            <tr>
+                                <td style="color: blue;">Bayer</td>
+                                <td>Denise Ann</td>
+                                <td>153</td>
+                                <td>0</td>
+                                <td>9:23 AM</td>
+                                <td><img src="img/network.png" style="height: 11px; width: 11px;" alt="clip">
+                                    8/27/2015</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
         <div id="todoList">
+            <p id="textInLeads">TODO LIST</p>
             <div id="line2"></div>
+
+            <ul id="myUL">
+                <li>Collaboratively administrate</li>
+                <li>Another to do on the list.Add as many you want</li>
+                <li>Dramatically maintain clicks-and-mortar</li>
+                <li>administrate emprowered markets</li>
+            </ul>
+
+            <input type="text" id="myInput" placeholder="Write some tasks todo here">
+            <div id="inTODO">
+                <span onclick="newElement()" class="addBtn">Add</span>
+                <button class="buttonINTODO">Active</button>
+            </div>
+
+
+            <script>
+                // Create a "close" button and append it to each list item
+                var myNodelist = document.getElementsByTagName("LI");
+                var i;
+                for (i = 0; i < myNodelist.length; i++) {
+                    var span = document.createElement("SPAN");
+                    var txt = document.createTextNode("\u00D7");
+                    span.className = "close";
+                    span.appendChild(txt);
+                    myNodelist[i].appendChild(span);
+                }
+
+                // Click on a close button to hide the current list item
+                var close = document.getElementsByClassName("close");
+                var i;
+                for (i = 0; i < close.length; i++) {
+                    close[i].onclick = function () {
+                        var div = this.parentElement;
+                        div.style.display = "none";
+                    }
+                }
+
+                // Add a "checked" symbol when clicking on a list item
+                var list = document.querySelector('ul');
+                list.addEventListener('click', function (ev) {
+                    if (ev.target.tagName === 'LI') {
+                        ev.target.classList.toggle('checked');
+                    }
+                }, false);
+
+                // Create a new list item when clicking on the "Add" button
+                function newElement() {
+                    var li = document.createElement("li");
+                    var inputValue = document.getElementById("myInput").value;
+                    var t = document.createTextNode(inputValue);
+                    li.appendChild(t);
+                    if (inputValue === '') {
+                        alert("You must write something!");
+                    } else {
+                        document.getElementById("myUL").appendChild(li);
+                    }
+                    document.getElementById("myInput").value = "";
+
+                    var span = document.createElement("SPAN");
+                    var txt = document.createTextNode("\u00D7");
+                    span.className = "close";
+                    span.appendChild(txt);
+                    li.appendChild(span);
+
+                    for (i = 0; i < close.length; i++) {
+                        close[i].onclick = function () {
+                            var div = this.parentElement;
+                            div.style.display = "none";
+                        }
+                    }
+                }
+            </script>
+
         </div>
 
         <div id="activities">
+            <p id="textInLeads">ACTIVITIES</p>
             <div id="line3"></div>
+
+            <span class="dot-green"></span>
+            <hr class="perpendicular-line-green">
+            </hr>
+
+            <span class="dot-orange"></span>
+            <hr class="perpendicular-line-blue">
+            </hr>
+
+            <span class="dot-blue"></span>
+            <hr class="perpendicular-line-orange">
+            </hr>
+
+            <p id="textNearGreen">Your domain will expered in 13 days</p>
+            <p id="textNearGreen2">4:30 p.m.</p>
+
+            <p id="textNearOrange">Designed the wordpress theme lily created her account</p>
+            <p id="textNearOrange2">1 hour ago</p>
+
+            <p id="textNearOrange">Template Builder Access (Video tutorial inside documentation) </p>
+            <p id="textNearOrange2">2 mins ago</p>
+
         </div>
+
         <div id="activities2">
+            <p id="textInLeads">ACTIVITIES</p>
             <div id="line4"></div>
+            <figure class="pie-chart"></figure>
+            <figcaption id="mm">
+                <span id="nn" style="color:#1310d4"></span>Chrome</br>
+                <span id="nn" style="color:#0e86d6"></span>Safari</br>
+                <span id="nn" style="color:#0f610f"></span>Firefox</br>
+
+            </figcaption>
+            <div id="textInActive">
+                <p id="articleInActive">Lorem ispum dolor sit amet, concectetur adipisicing edit, sed</p>
+                <p id="articleInActive">do eiusmod tempor incididant ut labore et dolore magna</p>
+                <p id="articleInActive">aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                <p id="articleInActive">ullacmo laboris nisi ut</p>
+
+            </div>
         </div>
         <div id="analytics">
+            <p id="textInLeads">ANALYTICS</p>
             <div id="line5"></div>
+            <div id="chart-container"></div>
+
+            <script type="text/javascript">
+                FusionCharts.ready(function () {
+                    var chartObj = new FusionCharts({
+                        type: 'stackedcolumn2d',
+                        renderAt: 'chart-container',
+                        width: '500',
+                        height: '320',
+                        dataFormat: 'json',
+                        dataSource: {
+                            "chart": {
+                                "palettecolors": "464da8,40378f",
+                                "yAxisName": " ",
+
+                                "numberPrefix": " ",
+                                "theme": "fusion"
+
+
+                            },
+
+                            "categories": [{
+                                "category": [{
+                                    "label": "Jan"
+                                }, {
+                                    "label": "Feb"
+                                }, {
+                                    "label": "Mar"
+                                }, {
+                                    "label": "Apr"
+                                }, {
+                                    "label": "May"
+                                }, {
+                                    "label": "Jun"
+                                }, {
+                                    "label": "Jul"
+                                }, {
+                                    "label": "Aug"
+                                }, {
+                                    "label": "Sep"
+                                }, {
+                                    "label": "Oct"
+                                }, {
+                                    "label": "Nov"
+                                }, {
+                                    "label": "Dec"
+                                }
+
+
+
+                                ]
+                            }],
+
+                            "dataset": [{
+                                "seriesname": " Customer ",
+                                "data": [{
+                                    "value": "450"
+                                }, {
+                                    "value": "220"
+                                }, {
+                                    "value": "220"
+                                }, {
+                                    "value": "220"
+                                }, {
+                                    "value": "450"
+                                }, {
+                                    "value": "400"
+                                }, {
+                                    "value": "450"
+                                }, {
+                                    "value": "450"
+                                }, {
+                                    "value": "450"
+                                }, {
+                                    "value": "400"
+                                }, {
+                                    "value": "470"
+                                }, {
+                                    "value": "470"
+                                }]
+                            }, {
+                                "seriesname": " User",
+                                "data": [{
+                                    "value": "270"
+                                }, {
+                                    "value": "70"
+                                }, {
+                                    "value": "110"
+                                }, {
+                                    "value": "250"
+                                }, {
+                                    "value": "110"
+                                }, {
+                                    "value": "400"
+                                }, {
+                                    "value": "280"
+                                }, {
+                                    "value": "300"
+                                }, {
+                                    "value": "220"
+                                }, {
+                                    "value": "110"
+                                }, {
+                                    "value": "130"
+                                }, {
+                                    "value": "140"
+                                }]
+                            }]
+                        }
+                    }
+                    );
+                    chartObj.render();
+                });
+            </script>
+
+
+
+
+
+
         </div>
+
+
+        <div id="footerLine"></div>
+
+        <p id="textInFooter">Copytight
+        <p id="textInFooter2"> M7amadsa3ed 2015. All rights reserved</p>
+        </p>
+        <p id="textInFooter3">Careers</p>
+        <p id="textInFooter4">Privacy policy</p>
+        <p id="textInFooter5">Feedback</p>
+
+
+
     </div>
-
-
 </body>
